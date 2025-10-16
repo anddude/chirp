@@ -1,0 +1,29 @@
+{
+"manifest_version": 3,
+"name": "Chirp",
+"version": "1.0",
+"description" : "Birder identifier game",
+"content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "css": ["style.css"],
+        "ts": ["./content.ts"]
+    }
+]
+,
+
+"icons":
+    {
+    "16": "/assets/images/icon/icon.png"
+    }
+,
+"permissions": [ "storage" ],
+"background": {
+    "service_worker": "background.ts",
+    "type": "module"
+},
+"action":{
+    "default_popup": "index.html"
+  }
+
+}
