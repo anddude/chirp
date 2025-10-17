@@ -6,12 +6,83 @@
     <title>Chirp</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="manifest" href="manifest.json" />
+    <title>Chirp Extension</title>
   </head>
   <body>
-    <h1>Hello Friend!</h1>
-    <form action="">
-         <input type="button" value="">
-    </form>
-    <script src="index.js"></script>
+    <!-- place everything within main to replace the fullscreen -->
+    <main id="takeover" class="takeover">
+      <section id ="mainPanel">
+      <header>
+        <h1>Chirp! Chirp!</h1>
+        <h1> Who's that bird?<h1>
+      </header>
+
+      <!-- input shadow bird image within div below shadow bird gets replaced with realbird-->
+      <div class="birdRow">
+        <div><img id="birdImg" src="assets/images/birds/shadowBird.png"> </div> 
+
+        <div class="audio controls">
+          <img src="assets/images/buttons/playBtn2.png" alt="" id="playChirp" class="btn" type="button">
+          <audio src="" id="chirpAudio" preload="auto" type="audio/mpeg">
+            <!-- use dom to replace chirpAudio -->
+          </audio>
+        </div>
+ 
+<!-- replacable section for fun fact and hint ... should lie in main panel -->
+          <section class="bubble">
+            <div id ="bubbleSpace">
+              <h2 id="bubbleTitle">Bird Fun Fact</h2>
+              <p id="bubbleNote">bird ipsom lorem</p>
+            </div>
+          </section>
+
+      <!-- play panel -->
+      <!-- <div class="controls">
+        <div class="audio controls">
+          <img src="assets/images/buttons/playBtn2.png" alt="" id="playChirp" class="btn" type="button">
+          <audio id="chirpAudio" preload="auto">
+            <!-- use dom to replace chirpAudio -->
+          </audio>
+        </div>
+        <!-- guess & hint section -->
+         <form id="guessForm" class="guess-area">
+            <label for="guessInput">Guess</label>
+            <input id="guessInput" class="input" name="guess" type="text" placeholder="Input the bird you hear ..." inputmode="text" required/>
+            <button id="submitGuessBtn" class="button" type="submit">
+              guess
+            </button>
+            <button id="hintBtn" class="'button" type="button">Hint</button>
+        </form>
+      </div>
+
+      <!-- SIDEPANEL: Badges, talk bubble, fun fact section, hint section, tech rest section -->
+      <aside class="sidebar">
+        <section class="sidePanel">
+          <h2 id="badgeTitle">Your Bird Badges</h2>
+          <div id="badgeGrid" class="badge_grid">
+            <ul id = "badgeList">
+              <li id="birdOne"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+              <li id="birdTwo"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+              <li id="birdThree"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+              <li id="birdFour"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+              <li id="birdFive"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+              <li id="birdSix"><img src="assets/images/birds/badges/questionBadge2.png" </li>
+            </ul>
+          </div>
+          </section>
+
+
+
+
+          </div>
+          
+
+
+      <script src="index.js"></script>
+    </section>
+
+ 
+
+    </main>
   </body>
 </html>

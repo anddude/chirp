@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* the above is what I used in my portfolio to give me a blank canvas to work with */
+
+
+body{
+    background-color: #F1e7d0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin:0;
+}
+
+main.takeover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+
+#mainPanel {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: var(--yellow);
+    border: 3px solid var(--forest);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+header h1, h2{
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    line-height: 1.2;
+    
+}
+.birdRow{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+#shadowBird img{
+    width: 260px;
+    height: auto;
+    opacity:0.6;
+    filter: grayscale(100%);
+    margin-top: 25px;
+}
+
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.audio.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.guess-area{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sidebar{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidePanel{
+    border: 3px solid #B1C469;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+#badgeList{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#badgeList li{
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#badgeList li img {
+    width: 50px;
+    height: auto;
+}
+
+
+#playChirp {
+    width: 350px;
+    height: auto;
+}
+
