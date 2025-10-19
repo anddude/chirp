@@ -7,7 +7,7 @@
     {
         "matches": ["<all_urls>"],
         "css": ["style.css"],
-        "ts": ["./content.ts"]
+        "js": ["./content.js"]
     }
 ]
 ,
@@ -18,20 +18,28 @@
     "32": "assets/images/icon/bird_icon_32x32.png",
     "48": "assets/images/icon/bird_icon_48x48.png",
     "128": "assets/images/icon/bird_icon_128x128.png"
-    }
-,
-"permissions": [ "storage", "alarms", "notifications" ],
+    },
+"web_accessible_resources": [
+{
+    "resources": [
+        "index.html"
+    ]
+}
+],
+"permissions": [ "storage", "alarms", "notifications", "activeTab", "webNavigation" ],
 "host_permissions": ["<all_urls>"],
 "background": {
-    "service_worker": "background.ts",
+    "service_worker": "background.js",
     "type": "module"
 },
 "action":{
-    "default_popup": "index.html"
+//we r doing takover, no pop-ups!
+    "default_title": "Chrip!", 
+    "run_at": "document_start"
   }
 
 }
 
 // cynthia used "webNavigation" and "activeTab" in permisions and used .js files and "run_at": "document_start" in content_Scripts
 
-//Christian &John 
+//Christian &John also used .js files 

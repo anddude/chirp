@@ -1,40 +1,42 @@
-const prompts: string[] = [
+const prompts = [
 "What's that chirping noise?", 
 "Did you catch that...what could it have been?", 
 "Whoa, what was that mellifluous sound?"
 ]
 
-const corrects: string[] =[
+const corrects =[
 `Wow! You have a great ear! It is the ${birdName}`,
 `Genius. Yes, that was the ${birdName}`,
 `Ah yes, definitely a ${birdName}, music to my ears!`
 ]
 
-const wrongs: string[] = [
+const wrongs = [
 `That's okay, you'll get it next time! `,
 `You win some you lose some. Don't worry you have ${tryCount} more tries today. `,
 `Oh no! The bird flew away insulted you didn't know...can't please everyone! We'll try again later.`
 ]
 
-const relaxRecs: string[] = [
+const relaxRecs = [
 "Let's take a break 😌 Boxed breathing is a great way to decompress. Breathe in through your nose for four seconds. Hold for four. Breathe out from your nose for four seconds. Hold for four. 🍃",
 `Let's take a break 😌 Reduce eye strain with the 20 - 20 -20 rule.  Every 20 minutes, look at something 20 feet away for 20 seconds. 😎 `,
 `Let's take a break 😌 Stay hyddrated with a sip of water. Water is essential for health as it helps regulate body temperature, lubricates joints, and protects your organs. 🚰`
 ]
 
-interface Bird {
-    name: string;
-    sciName: string;
-    funFact: string;
-    hint1: string;
-    hint2: string;
-    hint3: string;
-    image: string;
-    audio: string; 
-}
+// bird cless?? 
+
+// interface Bird {
+//     name: string;
+//     sciName: string;
+//     funFact: string;
+//     hint1: string;
+//     hint2: string;
+//     hint3: string;
+//     image: string;
+//     audio: string; 
+// }
 
 // Array of obj: Bird Data
-const birdData: Bird[] = [
+const birdData = [
     {
         name: `Blue Jay`,
         sciName: `Cyanocitta cristata`,
@@ -70,8 +72,8 @@ const birdData: Bird[] = [
 // this should have separate data page. 
 
 // variables
-let currentBird: Bird;
-let birdName: string;
+let currentBird;
+let birdName;
 const guessedBirds= []; // push obj of birds collected
 const badgeWall = ["link to q", "link to q", "link to q"] //push on the correct bird when guessed
 const guessCount = 0;
@@ -88,14 +90,14 @@ const sunsetVisit = false;
 const gameOver = false;
 
 // Variables for DOM elements
-const guessInput = document.getElementById('guessInput') as HTMLInputElement;
-const submitGuessBtn = document.getElementById('submitGuessBtn') as HTMLButtonElement;
-const hintBtn = document.getElementById('hintBtn') as HTMLButtonElement;
-const bubbleTitle = document.getElementById(`bubbleTitle`) as HTMLHeadingElement;
-const bubbleNote = document.getElementById('bubbleNote') as HTMLParagraphElement;
-const chirpAudio = document.getElementById('chirpAudio') as HTMLAudioElement;
-const birdImg = document.getElementById('birdImg') as HTMLImageElement;
-const promptFill = document.getElementById('prompt') as HTMLHeadingElement;
+const guessInput = document.getElementById('guessInput');
+const submitGuessBtn = document.getElementById('submitGuessBtn');
+const hintBtn = document.getElementById('hintBtn');
+const bubbleTitle = document.getElementById(`bubbleTitle`);
+const bubbleNote = document.getElementById('bubbleNote');
+const chirpAudio = document.getElementById('chirpAudio');
+const birdImg = document.getElementById('birdImg');
+const promptFill = document.getElementById('prompt');
 
 // let badges = guessedBirds.map((badge)=>{
 //     if(!guessedBirds) document.createElement(`img`);
