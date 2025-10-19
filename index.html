@@ -14,7 +14,7 @@
       <section id ="mainPanel">
       <header>
         <h1>Chirp! Chirp!</h1>
-        <h1> Who's that bird?<h1>
+        <h1 id="prompts">Who's that bird?<h1>
       </header>
 
       <!-- input shadow bird image within div below shadow bird gets replaced with realbird-->
@@ -22,7 +22,7 @@
         <div><img id="birdImg" src="assets/images/birds/shadowBird.png"> </div> 
 
         <div class="audio controls">
-          <img src="assets/images/buttons/playBtn2.png" alt="" id="playChirp" class="btn" type="button">
+          <img src="assets/images/buttons/playBtn2.png" alt="" id="playChirp" class="btn" type="button"/>
           <audio src="" id="chirpAudio" preload="auto" type="audio/mpeg">
             <!-- use dom to replace chirpAudio -->
           </audio>
@@ -31,18 +31,10 @@
 <!-- replacable section for fun fact and hint ... should lie in main panel -->
           <section class="bubble">
             <div id ="bubbleSpace">
-              <h2 id="bubbleTitle">Bird Fun Fact</h2>
-              <p id="bubbleNote">bird ipsom lorem</p>
+              <h2 id="bubbleTitle"></h2>
+              <p id="bubbleNote"></p>
             </div>
           </section>
-
-      <!-- play panel -->
-      <!-- <div class="controls">
-        <div class="audio controls">
-          <img src="assets/images/buttons/playBtn2.png" alt="" id="playChirp" class="btn" type="button">
-          <audio id="chirpAudio" preload="auto">
-            <!-- use dom to replace chirpAudio -->
-          </audio>
         </div>
         <!-- guess & hint section -->
          <form id="guessForm" class="guess-area">

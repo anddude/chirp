@@ -1,19 +1,19 @@
 const prompts: string[] = [
-     "What's that chirping noise?", 
-     "Did you catch that...what could it have been?", 
-     "Whoa, what was that mellifluous sound?"
-    ]
+"What's that chirping noise?", 
+"Did you catch that...what could it have been?", 
+"Whoa, what was that mellifluous sound?"
+]
 
 const corrects: string[] =[
- `Wow! You have a great ear! It is the ${birdName}`,
+`Wow! You have a great ear! It is the ${birdName}`,
 `Genius. Yes, that was the ${birdName}`,
- `Ah yes, definitely a ${birdName}, music to my ears!`
+`Ah yes, definitely a ${birdName}, music to my ears!`
 ]
 
 const wrongs: string[] = [
-       `That's okay, you'll get it next time! `,
-        `You win some you lose some. Don't worry you have ${tryCount} more tries today. `,
-        `Oh no! The bird flew away insulted you didn't know...can't please everyone! We'll try again later.`
+`That's okay, you'll get it next time! `,
+`You win some you lose some. Don't worry you have ${tryCount} more tries today. `,
+`Oh no! The bird flew away insulted you didn't know...can't please everyone! We'll try again later.`
 ]
 
 const relaxRecs: string[] = [
@@ -94,7 +94,8 @@ const hintBtn = document.getElementById('hintBtn') as HTMLButtonElement;
 const bubbleTitle = document.getElementById(`bubbleTitle`) as HTMLHeadingElement;
 const bubbleNote = document.getElementById('bubbleNote') as HTMLParagraphElement;
 const chirpAudio = document.getElementById('chirpAudio') as HTMLAudioElement;
-const birdImg = document.querySelector('birdImg') as HTMLImageElement;
+const birdImg = document.getElementById('birdImg') as HTMLImageElement;
+const promptFill = document.getElementById('prompt') as HTMLHeadingElement;
 
 // let badges = guessedBirds.map((badge)=>{
 //     if(!guessedBirds) document.createElement(`img`);
@@ -119,16 +120,35 @@ function startGame(){
     if(!currentBird && !gameOver){
     currentBird = birdData[randomNumber(birdData.length)];
     birdName = currentBird.name;
+
     chirpAudio.src = currentBird.audio; 
+    chirpAudio.play();
+
+    promptFill.innerText = prompts[randomNumber(prompts.length)];
+
     bubbleTitle.innerHTML = `That noise is a good reminder...`;
     bubbleNote.innerHTML = `${relaxRecs[randomNumber(relaxRecs.length)]}`;
     } else {
 
     }
 
+    while (!gameOver){
+        document.getElementById('guessForm')!.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if(guessInput.value) {
+            birdGuess(guessInput.value);
+            guessInput.value = '';
+        } 
+        })
+    }
+     
+  
+
 
 }
- // can just call this line in 
+ // can just call this line in
+ 
+ 
 
 function birdGuess(guess : string):void {
     //validator

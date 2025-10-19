@@ -20,7 +20,7 @@
     "128": "assets/images/icon/bird_icon_128x128.png"
     }
 ,
-"permissions": [ "storage", "alarms" ],
+"permissions": [ "storage", "alarms", "notifications" ],
 "host_permissions": ["<all_urls>"],
 "background": {
     "service_worker": "background.ts",
@@ -31,3 +31,7 @@
   }
 
 }
+
+// cynthia used "webNavigation" and "activeTab" in permisions and used .js files and "run_at": "document_start" in content_Scripts
+
+//Christian &John 
